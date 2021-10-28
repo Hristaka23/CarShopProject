@@ -1,4 +1,4 @@
-package OOPJAVA.CarShopProject;
+package CarShopProject;
 
 public class Car extends Vehicle {
     //she se dobavqt vidovete dali e suv jeep i tn.

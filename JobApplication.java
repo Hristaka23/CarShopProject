@@ -1,4 +1,4 @@
-package OOPJAVA.CarShopProject;
+package CarShopProject;
 
 public class JobApplication {
     String name;

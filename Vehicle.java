@@ -1,4 +1,4 @@
-package OOPJAVA.CarShopProject;
+package CarShopProject;
 
 public class Vehicle {
     String brand;
