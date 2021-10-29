@@ -1,13 +1,9 @@
-//package CarShopProject;
+package CarShopProject;
+import CarShopProject.Applicants.Applicant_ADD;
+import CarShopProject.Applicants.JobApplication;
+import CarShopProject.Vehicle_Package.Car_ADD;
 
-//import tomov.cartypes.Car;
-//import tomov.cartypes.Motorbike;
-//import tomov.Vehicle.*;
-//import tomov.cartypes.*;
-//import tomov.cartypes.Jeep;
-//import tomov.cartypes.Suv;
-//import tomov.cartypes.Van;
-
+import java.awt.font.TextHitInfo;
 import java.util.Scanner;
 
 public class Store {
@@ -24,19 +20,30 @@ public class Store {
         Store first = new Store("F1", "USA");
         int choice = -1;
 
-        System.out.println("What you want to make: \n" +
-                "1. Add Vehicle \n" +
-                "2. Add Employer \n" +
-                "0. To exit");
+        System.out.println("""
+                What you want to make:\s
+                1. Add Vehicle \s
+                2. Add Employer\s
+                3. Show Vehicle\s
+                4. Show Employer
+                5. Jobs Info\s
+                6. Candidate for Job\s
+                0. To exit\s
+                """
+        );
         while (choice != 0) {
             choice = scan.nextInt();
 
             if (choice == 1) {
-                Utilities.addCars();
+                Car_ADD.addCars();
 
             }
             if (choice == 2) {
-                Utilities.addApplicant();
+                Applicant_ADD.addApplicant();
+
+            }
+            if (choice == 3) {
+                Applicant_ADD.showApplicants();
 
             }
         }

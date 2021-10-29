@@ -1,4 +1,4 @@
-package CarShopProject;
+package CarShopProject.Vehicle_Package;
 
 public class Vehicle {
     String brand;
@@ -9,15 +9,16 @@ public class Vehicle {
     String color;
     int engine;
 
-    public  Vehicle(String brand, String model, int year, String color){
-        this.brand=brand;
-        this.model=model;
-        this.year=year;
+    public Vehicle(String brand, String model, int year, String color) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
         this.color = color;
         //this.price=price;
-      //  this.engine=engine;
+        //  this.engine=engine;
 
     }
+
     public String getBrand() {
         return brand;
     }

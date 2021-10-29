@@ -1,4 +1,4 @@
-package CarShopProject;
+package CarShopProject.Vehicle_Package;
 //
 //public class Utilities {
 //    public static void main(String[] args) {

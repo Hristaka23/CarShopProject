@@ -1,10 +1,10 @@
-//package CarShopProject;
+package CarShopProject.Applicants;
 
-public class App_Delivery {
+public class Applicant_SETTER {
 
         int numberofAppsdelivered;
 
-        public App_Delivery(int numberofAppsdelivered) {
+        public Applicant_SETTER(int numberofAppsdelivered) {
             if (numberofAppsdelivered > 0) {
                 this.numberofAppsdelivered = numberofAppsdelivered;
             }

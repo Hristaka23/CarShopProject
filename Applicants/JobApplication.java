@@ -1,4 +1,4 @@
-//package CarShopProject;
+package CarShopProject.Applicants;
 
 public class JobApplication {
     // class name
