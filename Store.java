@@ -1,4 +1,4 @@
-package CarShopProject;
+//package CarShopProject;
 
 //import tomov.cartypes.Car;
 //import tomov.cartypes.Motorbike;
@@ -26,7 +26,7 @@ public class Store {
 
         System.out.println("What you want to make: \n" +
                 "1. Add Vehicle \n" +
-                "2. Show Accepted Applicants \n" +
+                "2. Add Employer \n" +
                 "0. To exit");
         while (choice != 0) {
             choice = scan.nextInt();
@@ -36,7 +36,7 @@ public class Store {
 
             }
             if (choice == 2) {
-                Utilities.newApplicant();
+                Utilities.addApplicant();
 
             }
         }

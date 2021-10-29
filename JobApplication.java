@@ -1,42 +1,47 @@
-package CarShopProject;
+//package CarShopProject;
 
 public class JobApplication {
-    String name;
-    double experience;
-    String position;
-    String education;
+    // class name
+    private String name;
+    private String phoneNum;
+    private String education;
+    private int experience;
+    private String position_want;
+    private String more_information;
 
 
-    public JobApplication(String name, double experience, String position, String education) {
+    public JobApplication(String name, String phoneNum, String education, int experience, String position_want,String more_information) {  //parameterized constructor that accepts values for each of the fields
         this.name = name;
-        this.experience = experience;
-        this.position = position;
+        this.phoneNum = phoneNum;
         this.education = education;
+        this.experience = experience;
+        this.more_information = more_information;
+        this.position_want=position_want;
+
     }
 
-    public String getName() {
+
+    public String getName() {  //accessor get method for name field
         return name;
     }
 
-    public double getExperience() {
-        return experience;
-    }
-
-    public String getPosition() {
-        return position;
+    public String getPhoneNum() {   //accessor get method for phoneNum field
+        return phoneNum;
     }
 
     public String getEducation() {
         return education;
     }
 
-    public boolean requirements(double experience, String education, String position) {
-        if (experience >= 2 && education.equals("higher") && position.equals("manager")) {
-            return true;
-        } else if (experience >= 1 && (education.equals("primary") || education.equals("higher") && (position.equals("seller") || position.equals("secretary")))) {
-            return true;
-        }else {
-            return false;
-        }
+    public String getPosition_want() {
+        return position_want;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public String getMore_information() {
+        return more_information;
     }
 }
