@@ -36,15 +36,20 @@ public class Car_ADD {
             int year = Integer.parseInt(scan.nextLine());
             System.out.println();
 
-            System.out.print("Buying Price: ");
-            double buyingPrice = Double.parseDouble(scan.nextLine());
-            System.out.println();
 
             System.out.print("Color: ");
             String color = scan.nextLine();
             System.out.println();
 
-            Car car1 = new Car(brand, model, year, color);
+            System.out.print("Buying Price: ");
+            double buyingPrice = Double.parseDouble(scan.nextLine());
+            System.out.println();
+
+            System.out.print("Buying Price: ");
+            boolean sportmode = scan.hasNextBoolean();
+            System.out.println();
+
+            Car car1 = new Car(brand, model, year, color,buyingPrice,sportmode);
             allCars.add(car1);
 
         }

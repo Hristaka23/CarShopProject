@@ -9,14 +9,19 @@ public class Vehicle {
     String color;
     int engine;
 
-    public Vehicle(String brand, String model, int year, String color) {
+    public Vehicle(String brand, String model, int year, String color, double price) {
         this.brand = brand;
         this.model = model;
         this.year = year;
         this.color = color;
-        //this.price=price;
+        this.price=price;
         //  this.engine=engine;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Brand : "+brand+" " +  "Model: "+model +" "+" color: "+color;
     }
 
     public String getBrand() {

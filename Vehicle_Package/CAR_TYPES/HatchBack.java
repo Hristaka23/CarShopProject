@@ -2,10 +2,10 @@ package CarShopProject.Vehicle_Package.CAR_TYPES;
 
 import CarShopProject.Vehicle_Package.Vehicle;
 
-public class OffRoad4x4 extends Vehicle {
+public class HatchBack extends Vehicle {
 
 
-    public OffRoad4x4(String brand, String model, int year, String color,double price) {
+    public HatchBack(String brand, String model, int year, String color, double price) {
         super(brand, model, year, color,price);
 
     }

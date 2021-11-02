@@ -5,8 +5,8 @@ import CarShopProject.Vehicle_Package.Vehicle;
 public class SUV extends Vehicle {
 
 
-    public SUV(String brand, String model, int year, String color) {
-        super(brand, model, year, color);
+    public SUV(String brand, String model, int year, String color,double price) {
+        super(brand, model, year, color,price);
 
     }
 

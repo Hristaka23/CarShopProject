@@ -3,6 +3,8 @@ package CarShopProject;
 import CarShopProject.Applicants.Candidate;
 import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
+import CarShopProject.Vehicle_Package.Vehicle_Methods;
+import CarShopProject.Vehicle_Package.showVehicle;
 
 import java.util.Scanner;
 
@@ -48,6 +50,7 @@ public class Store {
             }
             if (choice == 4) {
 
+                showVehicle.ourVehicles();
             }
             if (choice == 5) {
 

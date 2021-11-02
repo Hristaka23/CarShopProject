@@ -25,37 +25,34 @@ public class Jobs {
         int choice2 = -1;
         while (choice2 != 0) {
             choice2 = scan.nextInt();
-            if (choice2 == 1) {
-                System.out.println("Manager");
-            }
-            if (choice2 == 2) {
-                System.out.println("Auto mechanic");
+           switch (choice2){
 
-            }
-            if (choice2 == 3) {
+               case 1:   System.out.println("Manager");
+                   break;
+                case 2:   System.out.println("Auto mechanic");
+                    break;
+               case 3:
                 System.out.println("Car Salesperson");
+                   break;
 
-            }
-            if (choice2 == 4) {
+            case 4:
                 System.out.println("Vehicle Inspector");
+                break;
 
-            }
-            if (choice2 == 5) {
+        case 5:
                 System.out.println("Tow truck driver");
-
-            }
-            if (choice2 == 6) {
+            break;
+               case 6:
                 System.out.println("Auto engineer");
+                   break;
 
 
-            }
-            if (choice2 == 7) {
+            case 7:
                 System.out.println("Tire technician");
 
-            }
-
-            if (choice2 == 0) {
-                System.out.println("""
+break;
+               case 0:
+                   System.out.println("""
                 What you want to make:\s
                 1. Add Vehicle \s
                 2. Candidate for Job\s
@@ -65,7 +62,22 @@ public class Jobs {
                 6. Job help\s
                 0. To exit\s
                 """
-                );
+                   );
+                   break;
+               default:
+                   System.out.println("""
+                What you want to see:\s
+                1. Manager \s
+                2. Auto Mechanic\s
+                3. Car Salesperson\s
+                4. Vehicle Inspector\s
+                5. Tow truck driver\s
+                6. Auto engineer\s
+                7. Tire technician\s
+                0. Go to Main Menu\s
+                """
+                   );
+                   break;
             }
 
         }
