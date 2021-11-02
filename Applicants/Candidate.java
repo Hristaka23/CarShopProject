@@ -1,6 +1,8 @@
 package CarShopProject.Applicants;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 import static CarShopProject.Applicants.Candidate_Methods.*;
 
@@ -9,17 +11,16 @@ public class Candidate {
 
 
     public static void addApplicant() {
-        List<JobApplication> applicants = new ArrayList<>();
         Scanner app_scan = new Scanner(System.in);
         int app_quantity = 1;
         Applicant_SETTER app = new Applicant_SETTER(app_quantity);
-        newApplicant(app, app_scan, applicants);
+        newApplicant(app, app_scan);
 
 
     }
 
 
-    public static void newApplicant(Applicant_SETTER app, Scanner app_scan, List<JobApplication> applicants) {
+    public static void newApplicant(Applicant_SETTER app, Scanner app_scan) {
         for (int i = 0; i < app.getNumberOfAPPSDelivered(); i++) {
             System.out.println("----YOU ARE CANDIDATING FOR A JOB----");
             System.out.println();
@@ -49,50 +50,55 @@ public class Candidate {
             System.out.println();
 
             JobApplication applicant = new JobApplication(name, phone_num, education, experience, position, more_inf);
-            applicants.add(applicant);
-
-        }
-
-
-        System.out.println("Applicants for Job Interview");
-        for (JobApplication applicant : applicants) {
+            System.out.println("Applicants for Job Interview");
+            // for (JobApplication applicant : applicant) {
 
             if (applicant.getPosition_want().contains("manager")) {
-                isQualified_Manager(applicant);
-                accepted_applicants.add(applicant);
+                if (isQualified_Manager(applicant)) {
+                    accepted_applicants.add(applicant);
+
+                }
             }
             if (applicant.getPosition_want().contains("mechanic")) {
-                isQualified_Mechanic(applicant);
-                accepted_applicants.add(applicant);
-
+                if (isQualified_Mechanic(applicant)) {
+                    accepted_applicants.add(applicant);
+                }
             }
             if (applicant.getPosition_want().contains("car_salesperson")) {
-                isQualified_CarSalesPerson(applicant);
-                accepted_applicants.add(applicant);
-
+                if (isQualified_CarSalesPerson(applicant)) {
+                    accepted_applicants.add(applicant);
+                }
             }
 
             if (applicant.getPosition_want().contains("auto_engineer")) {
-                isQualified_AutoEngineer(applicant);
-                accepted_applicants.add(applicant);
+                if (isQualified_AutoEngineer(applicant)) {
+                    accepted_applicants.add(applicant);
+                }
 
             }
 
             if (applicant.getPosition_want().contains("tire_technician")) {
-                isQualified_TireTechnician(applicant);
-                accepted_applicants.add(applicant);
+                if (isQualified_TireTechnician(applicant)) {
+                    accepted_applicants.add(applicant);
+                }
 
             }
 
             if (applicant.getPosition_want().contains("vehicle_inspector")) {
-                isQualified_VehicleInspector(applicant);
-                accepted_applicants.add(applicant);
+                if (isQualified_VehicleInspector(applicant)) {
+                    accepted_applicants.add(applicant);
 
+                }
             }
             if (applicant.getPosition_want().contains("tow_truck_driver")) {
-                accepted_applicants.add(applicant);
+                if (isQualified_TowTruckDriver(applicant)) {
+
+                    accepted_applicants.add(applicant);
+                }
 
             }
         }
+
+
     }
 }
