@@ -11,7 +11,7 @@ public class showVehicle {
 
 
     public static void ourVehicles() {
-        Map<String, ArrayList<Object>> types = new HashMap<>();
+        Map<String, ArrayList<Object>> types_vehicles = new HashMap<>();
         ArrayList<Object> hatchback = new ArrayList<>();
         ArrayList<Object> sport_car = new ArrayList<>();
         ArrayList<Object> offroad_car = new ArrayList<>();
@@ -23,7 +23,7 @@ public class showVehicle {
         HatchBack ford_focus_zetec = new HatchBack("Ford", "Focus Zetec Edition 1.0", 2021, "Grey", 61000);
         hatchback.add(volkswagen_golf_mk8);
         hatchback.add(ford_focus_zetec);
-        types.put("HatchBack", hatchback);
+        types_vehicles.put("HatchBack", hatchback);
 
 
         // VEHICLE TYPE: CAR
@@ -31,35 +31,47 @@ public class showVehicle {
         Car audi_a8 = new Car("AUDI", "A8", 2019, "Grey", 40000, true);
         sport_car.add(bmw_m3);
         sport_car.add(audi_a8);
-        types.put("sportcar", sport_car);
-
-
+        types_vehicles.put("sportcar", sport_car);
+//И това :)
         // VEHICLE TYPE: OffRoad
         OffRoad4x4 mitsubishi_pajero = new OffRoad4x4("Mitsubishi", "Pajero", 2015, "White", 31000);
         OffRoad4x4 land_rover_defender = new OffRoad4x4("Land Rover", "Defender", 2017, "Orange", 21000);
 
-        offroad_car.add(mitsubishi_pajero.getBrand());
-        offroad_car.add(land_rover_defender.getBrand());
-        types.put("OFFROAD", offroad_car);
+        offroad_car.add(mitsubishi_pajero);
+        offroad_car.add(land_rover_defender);
+        types_vehicles.put("OFFROAD", offroad_car);
 
 
         // VEHICLE TYPE: SUV
         SUV hyundai_tucson = new SUV("Hyundai", "Tucson", 2022, "White", 71000);
         SUV mazda_cx_5 = new SUV("Mazda", "CX-5", 2021, "White", 61000);
 
-        suv.add(hyundai_tucson.getBrand());
-        suv.add(mazda_cx_5.getBrand());
-        types.put("SUV", suv);
-
-        for (Map.Entry<String, ArrayList<Object>> set : types.entrySet()) {
+        suv.add(hyundai_tucson);
+        suv.add(mazda_cx_5);
+        types_vehicles.put("SUV", suv);
 
 
-                System.out.println("Тype : " + set.getKey() + " = " + " Vehicle's : " + set.getValue());
 
 
+        for (Map.Entry<String, ArrayList<Object>> vehicles : types_vehicles.entrySet()) {
+            String key = vehicles.getKey(); // contains the keys
+            ArrayList<Object> val = vehicles.getValue(); // contains arraylists
+            // print all the key and values in the hashmap
+            // System.out.println(key + ": " + val);
+
+            // using interator to get the specific values arraylists
+            Iterator<Object> itr = val.iterator();
+            int i = 0;
+            Object[] data = new Object[val.size()];
+            while (itr.hasNext()) {
+                Object array = itr.next();
+                data[i] = array;
+                System.out.println(data[i]);
+                //  System.out.println(ke);// GET THE VALUE
+                i++;
+            }
         }
-
     }
-
-
 }
+
+//да
