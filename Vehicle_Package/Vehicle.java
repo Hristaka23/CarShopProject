@@ -21,7 +21,13 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Brand : "+brand+" " +  "Model: "+model +" "+" color: "+color;
+
+        return
+                "- BRAND: "+brand +"\n" +
+                "- MODEL: "+model +"\n"+
+                "- COLOR: "+color +"\n"+
+                "- PRICE: "+price+" $"+"\n"+
+        "  ";
     }
 
     public String getBrand() {
