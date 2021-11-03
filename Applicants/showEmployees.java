@@ -1,5 +1,8 @@
 package CarShopProject.Applicants;
 
+import CarShopProject.Core_Store;
+import CarShopProject.Menu;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,7 +11,7 @@ import static CarShopProject.Applicants.Candidate.accepted_applicants;
 public class showEmployees {
 
 
-    public static void show() {
+    public static void show(Core_Store coreStore) {
 
         Set<JobApplication> acc_app = new HashSet<JobApplication>(accepted_applicants);
         JobApplication default_applicant1 = new JobApplication("Pesho", "0324234", "high", 6, "manager", "");
@@ -23,6 +26,7 @@ public class showEmployees {
 
 
         }
+        Menu.menu(coreStore);
     }
 
 }

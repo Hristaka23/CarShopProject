@@ -1,6 +1,7 @@
 package CarShopProject;
 
 import CarShopProject.Applicants.Candidate;
+import CarShopProject.Applicants.showEmployees;
 import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
 import CarShopProject.Vehicle_Package.Vehicle_Methods;
@@ -8,7 +9,6 @@ import CarShopProject.Vehicle_Package.showVehicle;
 
 import java.util.Scanner;
 
-import static CarShopProject.Applicants.showEmployees.show;
 
 public class Store {
 
@@ -21,43 +21,32 @@ public class Store {
         System.out.println("---------------------------------------------------  ");
         System.out.println("Welcome to the "+"'"+coreStore.name+"'"+" store !");
         System.out.println("---------------------------------------------------  ");
-        System.out.println("     ");
-        System.out.println("""
-                What you want to make:\s
-                1. Add Vehicle \s
-                2. Candidate for Job\s
-                3. Show Employers\s
-                4. Show Vehicles\s
-                5. Our Stores\s
-                6. Job help\s
-                0. To exit\s
-                """
-        );
+        Menu.menu(coreStore);
         while (choice != 0) {
             choice = scan.nextInt();
 
             if (choice == 1) {
-                Car_ADD.addCars();
+                Car_ADD.addCars(coreStore);
 
             }
             if (choice == 2) {
-                Candidate.addApplicant();
+                Candidate.addApplicant(coreStore);
 
             }
             if (choice == 3) {
-                show();
+                showEmployees.show(coreStore);
 
             }
             if (choice == 4) {
 
-                showVehicle.ourVehicles();
+                showVehicle.ourVehicles(coreStore);
             }
-            if (choice == 5) {
-
-
-            }
+//            if (choice == 5) {
+//
+//
+//            }
             if (choice == 6) {
-                Jobs.jobsInfo();
+                Jobs.jobsInfo(coreStore);
 
             }
 

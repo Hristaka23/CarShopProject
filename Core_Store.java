@@ -9,4 +9,5 @@ public class Core_Store {
         this.name = name;
         this.address = address;
     }
+
 }

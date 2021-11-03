@@ -1,5 +1,7 @@
 package CarShopProject.Vehicle_Package;
 
+import CarShopProject.Core_Store;
+import CarShopProject.Menu;
 import CarShopProject.Vehicle_Package.CAR_TYPES.Car;
 import CarShopProject.Vehicle_Package.CAR_TYPES.HatchBack;
 import CarShopProject.Vehicle_Package.CAR_TYPES.OffRoad4x4;
@@ -10,7 +12,7 @@ import java.util.*;
 public class showVehicle {
 
 
-    public static void ourVehicles() {
+    public static void ourVehicles(Core_Store coreStore) {
         Map<String, ArrayList<Object>> types_vehicles = new HashMap<>();
         ArrayList<Object> hatchback = new ArrayList<>();
         ArrayList<Object> sport_car = new ArrayList<>();
@@ -27,8 +29,8 @@ public class showVehicle {
 
 
         // VEHICLE TYPE: CAR
-        Car bmw_m3 = new Car("BMW", "M3", 2019, "Black", 30000, true);
-        Car audi_a8 = new Car("AUDI", "A8", 2019, "Grey", 40000, true);
+        Car bmw_m3 = new Car("BMW", "M3", 2019, "Black", 30000);
+        Car audi_a8 = new Car("AUDI", "A8", 2019, "Grey", 40000);
         sport_car.add(bmw_m3);
         sport_car.add(audi_a8);
         types_vehicles.put("sportcar", sport_car);
@@ -71,7 +73,10 @@ public class showVehicle {
                 i++;
             }
         }
+
+            Menu.menu(coreStore);
+
     }
 }
 
-//да
+
