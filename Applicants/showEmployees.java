@@ -2,6 +2,9 @@ package CarShopProject.Applicants;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import CarShopProject.Core_Store;
+import CarShopProject.Menu;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,7 +14,7 @@ public class showEmployees {
 
 
 
-    public static void show() {
+    public static void show(Core_Store coreStore) {
 
         ArrayList<JobApplication> acc_app = new ArrayList<>(accepted_applicants);
 
@@ -72,6 +75,7 @@ public class showEmployees {
             System.out.println(" ");
 
         }
+        Menu.menu(coreStore);
     }
 
 }

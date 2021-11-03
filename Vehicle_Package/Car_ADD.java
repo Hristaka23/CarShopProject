@@ -1,6 +1,8 @@
 package CarShopProject.Vehicle_Package;
 
 
+import CarShopProject.Core_Store;
+import CarShopProject.Menu;
 import CarShopProject.Vehicle_Package.CAR_TYPES.Car;
 
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Car_ADD {
-    public static void addCars() { //СПОРЕД МЕН МОЖЕ И В ЕДИН МЕТОД НО СЕГА НЕ СЕ СЕЩАМ  метод *1-този и метод *2
+    public static void addCars(Core_Store coreStore) { //СПОРЕД МЕН МОЖЕ И В ЕДИН МЕТОД НО СЕГА НЕ СЕ СЕЩАМ  метод *1-този и метод *2
 
         ArrayList<Car> allCars = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
@@ -18,6 +20,14 @@ public class Car_ADD {
         newStock(newDel, scan, allCars);
         for (Car allCar : allCars) {
             System.out.println(allCar);
+        }
+        System.out.println();
+        System.out.print("Would you like to take new delivery: [yes][no]");
+        String choice = scan.nextLine();
+        if (choice.equals("yes")) {
+            addCars(coreStore);
+        }else{
+            Menu.menu(coreStore);
         }
     }
 
@@ -45,11 +55,7 @@ public class Car_ADD {
             double buyingPrice = Double.parseDouble(scan.nextLine());
             System.out.println();
 
-            System.out.print("Buying Price: ");
-            boolean sportmode = scan.hasNextBoolean();
-            System.out.println();
-
-            Car car1 = new Car(brand, model, year, color,buyingPrice,sportmode);
+            Car car1 = new Car(brand, model, year, color,buyingPrice );
             allCars.add(car1);
 
         }
