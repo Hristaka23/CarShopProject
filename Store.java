@@ -3,8 +3,8 @@ package CarShopProject;
 import CarShopProject.Applicants.Candidate;
 import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
-import CarShopProject.Vehicle_Package.Vehicle_Methods;
-import CarShopProject.Vehicle_Package.showVehicle;
+import CarShopProject.Vehicle_Package.ShowVehicle;
+import CarShopProject.Stores.BaseStore;
 
 import java.util.Scanner;
 
@@ -16,15 +16,16 @@ public class Store {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int choice = -1;
-        Core_Store coreStore= new Core_Store("Auto Number 1","Bulgaria");
+        BaseStore coreStore = new BaseStore("Auto Number 1", "Bulgaria");
+
         System.out.println("     ");
         System.out.println("---------------------------------------------------  ");
-        System.out.println("Welcome to the "+"'"+coreStore.name+"'"+" store !");
+        System.out.println("------📢📢📢 WELCOME TO OUR VEHICLE STORE! 📢📢📢----  ");
         System.out.println("---------------------------------------------------  ");
         System.out.println("     ");
         System.out.println("""
                 What you want to make:\s
-                1. Add Vehicle \s
+                1. Add Vehicle\s
                 2. Candidate for Job\s
                 3. Show Employers\s
                 4. Show Vehicles\s
@@ -50,10 +51,10 @@ public class Store {
             }
             if (choice == 4) {
 
-                showVehicle.ourVehicles();
+                ShowVehicle.ourVehicles();
             }
             if (choice == 5) {
-
+                System.out.println(coreStore);
 
             }
             if (choice == 6) {
