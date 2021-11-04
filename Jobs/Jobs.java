@@ -34,26 +34,6 @@ public class Jobs {
             switch (choice2) {
 
                 case 1:
-                    System.out.println("Manager");
-                    break;
-                case 2:
-                    System.out.println("Auto mechanic");
-                    break;
-                case 3:
-                    System.out.println("Car Salesperson");
-                    break;
-
-                case 4:
-                    System.out.println("Vehicle Inspector");
-                    break;
-
-                case 5:
-                    System.out.println("Tow truck driver");
-                    break;
-                case 6:
-                    System.out.println("Auto engineer");
-
-                case 1:
                     System.out.println("Needed things for Manager position:");
                     System.out.println("Education: Must be high");
                     System.out.println("Experience: At least 4 years");
@@ -98,23 +78,15 @@ public class Jobs {
                 case 0:
                     Menu.menu(coreStore);
                     break;
-            System.out.println("Needed things for Driver position:");
-            System.out.println("Education: At least secondary");
-            System.out.println("Experience: At least 3 years");
-            break;
 
-            case 0:
-                Menu.menu(coreStore);
-                break;
-
+            }
+            System.out.println();
+            System.out.print("Would you like to take new delivery: [yes][no]");
+            choice = scan.next();
+            if (choice.equals("no")) {
+                choice = "no";
+            }
         }
-        System.out.println();
-        System.out.print("Would you like to take new delivery: [yes][no]");
-        choice = scan.next();
-        if (choice.equals("no")) {
-            choice = "no";
-        }
-    }
         Menu.menu(coreStore);
-}
+    }
 }
