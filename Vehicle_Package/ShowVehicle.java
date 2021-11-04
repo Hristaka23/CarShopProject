@@ -2,22 +2,26 @@ package CarShopProject.Vehicle_Package;
 
 import CarShopProject.Core_Store;
 import CarShopProject.Menu;
-import CarShopProject.Vehicle_Package.CAR_TYPES.Car;
-import CarShopProject.Vehicle_Package.CAR_TYPES.HatchBack;
-import CarShopProject.Vehicle_Package.CAR_TYPES.OffRoad4x4;
-import CarShopProject.Vehicle_Package.CAR_TYPES.SUV;
+import CarShopProject.Vehicle_Package.CAR_TYPES.*;
 
 import java.util.*;
 
-public class showVehicle {
+public class ShowVehicle {
 
 
     public static void ourVehicles(Core_Store coreStore) {
+        //==========================HASHMAP AND ARRAYLISTS=======================================================================
         Map<String, ArrayList<Object>> types_vehicles = new HashMap<>();
         ArrayList<Object> hatchback = new ArrayList<>();
         ArrayList<Object> sport_car = new ArrayList<>();
         ArrayList<Object> offroad_car = new ArrayList<>();
         ArrayList<Object> suv = new ArrayList<>();
+        ArrayList<Object> electric = new ArrayList<>();
+        ArrayList<Object> cabriolet = new ArrayList<>();
+        ArrayList<Object> minivan = new ArrayList<>();
+        ArrayList<Object> coupe = new ArrayList<>();
+        ArrayList<Object> pickup = new ArrayList<>();
+        ArrayList<Object> sedan = new ArrayList<>();
 
 
 //==================================VEHICLE TYPE: HATCHBACK===============================================================
@@ -53,14 +57,58 @@ public class showVehicle {
         suv.add(mazda_cx_5);
         types_vehicles.put("SUV", suv);
 
+        //==================================VEHICLE TYPE: ELECTRIC===============================================================
+        Electric_Car tesla_1 = new Electric_Car("Tesla", "Model 3", 2022, "White", 71000);
+        Electric_Car tesla_2 = new Electric_Car("Tesla", "Model 1", 2022, "White", 71000);
+        electric.add(tesla_1);
+        electric.add(tesla_2);
+        types_vehicles.put("ELECTRIC", electric);
+        //==================================VEHICLE TYPE: CABRIOLET===============================================================
+        Cabriolet audi_roadster = new Cabriolet("AUDI", "TT Roadster", 2020, "White", 81000);
+        Cabriolet mercedes_cabrio = new Cabriolet("Mercedes", "E Class Cabriolet", 2017, "White", 71000);
+        cabriolet.add(audi_roadster);
+        cabriolet.add(mercedes_cabrio);
+        types_vehicles.put("CABRIOLET", cabriolet);
+        //==================================VEHICLE TYPE: MINIVAN===============================================================
+        Minivan minivan_1 = new Minivan("Toyota", "Tucson", 2022, "White", 71000);
+        Minivan minivan_2 = new Minivan("minivan", "Tucson", 2022, "White", 71000);
+        minivan.add(minivan_1);
+        minivan.add(minivan_2);
+        types_vehicles.put("MINIVAN", minivan);
+        //==================================VEHICLE TYPE: COUPE===============================================================
+        Coupe coupe_1 = new Coupe("To", "Tucson", 2022, "White", 71000);
+        Coupe coupe_2 = new Coupe("Coupe_2", "Tucson", 2022, "White", 71000);
+        coupe.add(coupe_1);
+        coupe.add(coupe_2);
+        types_vehicles.put("COUPE", coupe);
+        //==================================VEHICLE TYPE: PICKUP===============================================================
+        Pickup_truck pickup_1 = new Pickup_truck("Pickup", "Tucson", 2022, "White", 71000);
+        Pickup_truck pickup_2 = new Pickup_truck("Pickup", "Tucson", 2022, "White", 71000);
+        pickup.add(pickup_1);
+        pickup.add(pickup_2);
+        types_vehicles.put("PICKUP", pickup);
+        //==================================VEHICLE TYPE: SEDAN===============================================================
+        Sedan sedan_1 = new Sedan("Sedan", "Tucson", 2022, "White", 71000);
+        Sedan sedan_2 = new Sedan("Sedan", "Tucson", 2022, "White", 71000);
+        sedan.add(sedan_1);
+        sedan.add(sedan_2);
+        types_vehicles.put("SEDAN", sedan);
+
 //=====================================PRINTING=====================================================
+
         System.out.println("""
                 🚘 VEHICLE TYPES\s
                 Select :
-                1. SPORT CAR \s
+                1. Sport Car \s
                 2. SUV \s
-                3. OFFROAD \s
-                4. HATCHBACK \s
+                3. OffRoad \s
+                4. HatchBack \s
+                5. Electric Car\s
+                6. Cabriolet\s
+                7. Minivan\s
+                8. Coupe\s
+                9. Pickup\s
+                10. Sedan\s
                 0. To exit\s
                 """
         );
@@ -79,26 +127,61 @@ public class showVehicle {
             Iterator<Object> itr = val.iterator();
             int i = 0;
             Object[] data = new Object[val.size()];
-                while (itr.hasNext() ) {
+            while (itr.hasNext()) {
 
 
-                    Object array = itr.next();
+                Object array = itr.next();
                 data[i] = array;
                 // System.out.println(data[i] + "  " + key);
                 if (choice_type == 1 && key.equals("SPORTCAR")) {
-                    System.out.println("VEHICLE NO: ["+(i+1)+"]");
+                    System.out.println("======SPORT VEHICLE =======");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
                     System.out.println(data[i]);
                 }
                 if (choice_type == 2 && key.equals("SUV")) {
-                    System.out.println("VEHICLE NO: ["+(i+1)+"]");
+                    System.out.println("======SUV VEHICLE =======");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
                     System.out.println(data[i]);
                 }
                 if (choice_type == 3 && key.equals("OFFROAD")) {
-                    System.out.println("VEHICLE NO: ["+(i+1)+"]");
+                    System.out.println("======OFFROAD VEHICLE=====");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
                     System.out.println(data[i]);
                 }
                 if (choice_type == 4 && key.equals("HATCHBACK")) {
-                    System.out.println("VEHICLE NO: ["+(i+1)+"]");
+                    System.out.println("======HATCHBACK VEHICLE=====");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+
+                if (choice_type == 5 && key.equals("ELECTRIC")) {
+                    System.out.println("======ELECTRIC VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+                if (choice_type == 6 && key.equals("CABRIOLET")) {
+                    System.out.println("======CABRIOLET VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+                if (choice_type == 7 && key.equals("MINIVAN")) {
+                    System.out.println("======MINIVAN VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+                if (choice_type == 8 && key.equals("COUPE")) {
+                    System.out.println("======COUPE VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+                if (choice_type == 9 && key.equals("PICKUP")) {
+                    System.out.println("======PICKUP VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
+                    System.out.println(data[i]);
+                }
+                if (choice_type == 10 && key.equals("SEDAN")) {
+                    System.out.println("======SEDAN VEHICLE=========");
+                    System.out.println("VEHICLE NO: [" + (i + 1) + "]");
                     System.out.println(data[i]);
                 }
 
@@ -113,7 +196,7 @@ public class showVehicle {
             ourVehicles(coreStore);
         }
 
-            Menu.menu(coreStore);
+        Menu.menu(coreStore);
 
     }
 }

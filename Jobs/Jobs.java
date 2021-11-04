@@ -33,6 +33,7 @@ public class Jobs {
             choice2 = scan.nextInt();
             switch (choice2) {
 
+
                 case 1:
                     System.out.println("Needed things for Manager position:");
                     System.out.println("Education: Must be high");

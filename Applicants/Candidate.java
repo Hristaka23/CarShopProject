@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static ProjectCopy2.CarShopProject.Applicants.Candidate_Methods.*;
+import static CarShopProject.Applicants.Candidate_Methods.*;
 
 public class Candidate {
     static List<JobApplication> accepted_applicants = new ArrayList<>();

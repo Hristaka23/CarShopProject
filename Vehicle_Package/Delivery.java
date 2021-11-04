@@ -1,9 +1,7 @@
 package CarShopProject.Vehicle_Package;
 
 
-
 public class Delivery {
-//za momenta samo broi koli
 
     int numberOfCarsDelivered;
 
