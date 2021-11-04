@@ -18,8 +18,6 @@ public class Candidate {
         int app_quantity = 1;
         Applicant_SETTER app = new Applicant_SETTER(app_quantity);
         newApplicant(app, scan,coreStore);
-
-
     }
 
 

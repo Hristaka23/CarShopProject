@@ -10,10 +10,9 @@ public class Menu {
                 2. Candidate for Job\s
                 3. Show Employers\s
                 4. Show Vehicles\s
-                6. Job help\s
+                5. Job help\s
                 0. To exit\s
                 """
         );
     }
 }
-//5. Our Stores

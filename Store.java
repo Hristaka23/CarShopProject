@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Store {
 
 
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int choice = -1;
@@ -56,5 +57,3 @@ public class Store {
 
 
 }
-
-
