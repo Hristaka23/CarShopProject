@@ -1,12 +1,9 @@
 package CarShopProject.Applicants;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 import CarShopProject.Core_Store;
 import CarShopProject.Menu;
-
-import java.util.HashSet;
-import java.util.Set;
 
 import static CarShopProject.Applicants.Candidate.accepted_applicants;
 
@@ -27,34 +24,34 @@ public class showEmployees {
         acc_app.add(mechanic_2);
 
         //================================AUTO ENGINEER=============================
-        JobApplication auto_engineer_1 = new JobApplication("Stilyan", "0324234", "high", 10, "auto_engineer", "");
-        JobApplication auto_engineer_2= new JobApplication("Petur", "0324234", "high", 6, "auto_engineer", "");
+        JobApplication auto_engineer_1 = new JobApplication("Stilyan", "0324234", "high", 10, "engineer", "");
+        JobApplication auto_engineer_2= new JobApplication("Petur", "0324234", "high", 6, "engineer", "");
 
         acc_app.add(auto_engineer_1);
         acc_app.add(auto_engineer_2);
 
         //================================TOW TRUCK DRIVER=============================
-        JobApplication tow_truck_driver_1 = new JobApplication("Martin", "0324234", "high", 6, "tow_truck_driver", "");
+        JobApplication tow_truck_driver_1 = new JobApplication("Martin", "0324234", "high", 6, "driver", "");
 
         acc_app.add(tow_truck_driver_1);
         //================================CAR SALESPERSON=============================
-        JobApplication car_salesperson_1 = new JobApplication("Yoana", "0324234", "high", 6, "car_salesperson", "");
-        JobApplication car_salesperson_2 = new JobApplication("Stefan", "0224234", "high", 6, "car_salesperson", "");
-        JobApplication car_salesperson_3 = new JobApplication("Yoan", "0524234", "high", 6, "car_salesperson", "");
+        JobApplication car_salesperson_1 = new JobApplication("Yoana", "0324234", "high", 6, "salesperson", "");
+        JobApplication car_salesperson_2 = new JobApplication("Stefan", "0224234", "high", 6, "salesperson", "");
+        JobApplication car_salesperson_3 = new JobApplication("Yoan", "0524234", "high", 6, "salesperson", "");
 
         acc_app.add(car_salesperson_1);
         acc_app.add(car_salesperson_2);
         acc_app.add(car_salesperson_3);
 
         //================================VEHICLE INSPECTOR =============================
-        JobApplication vehicle_inspector_1 = new JobApplication("Tihomir", "0324234", "high", 6, "vehicle_inspector", "");
-        JobApplication vehicle_inspector_2= new JobApplication("Angel", "0324234", "high", 6, "vehicle_inspector", "");
+        JobApplication vehicle_inspector_1 = new JobApplication("Tihomir", "0324234", "high", 6, "inspector", "");
+        JobApplication vehicle_inspector_2= new JobApplication("Angel", "0324234", "high", 6, "inspector", "");
 
         acc_app.add(vehicle_inspector_1);
         acc_app.add(vehicle_inspector_2);
 
         //================================TIRE TECHNICIAN ==============================
-        JobApplication tire_technician_1 = new JobApplication("Alex", "0324234", "high", 6, "tire_technician", "");
+        JobApplication tire_technician_1 = new JobApplication("Alex", "0324234", "high", 6, "technician", "");
 
         acc_app.add(tire_technician_1);
 

@@ -4,8 +4,7 @@ import CarShopProject.Applicants.Candidate;
 import CarShopProject.Applicants.showEmployees;
 import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
-import CarShopProject.Vehicle_Package.ShowVehicle;
-import CarShopProject.Stores.BaseStore;
+import CarShopProject.Vehicle_Package.showVehicle;
 
 import java.util.Scanner;
 
@@ -13,10 +12,11 @@ import java.util.Scanner;
 public class Store {
 
 
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int choice = -1;
-        BaseStore Core_Store = new BaseStore("Auto Number 1", "Bulgaria");
+        Core_Store Core_Store = new Core_Store("Auto Number 1", "Bulgaria");
 
         System.out.println("     ");
         System.out.println("---------------------------------------------------  ");
@@ -46,7 +46,7 @@ public class Store {
 //
 //
 //            }
-            if (choice == 6) {
+            if (choice == 5) {
                 Jobs.jobsInfo(Core_Store);
 
             }
@@ -58,5 +58,3 @@ public class Store {
 
 
 }
-
-
