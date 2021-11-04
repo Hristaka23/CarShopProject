@@ -14,7 +14,7 @@ public class Vehicle {
         this.model = model;
         this.year = year;
         this.color = color;
-        this.price=price;
+        this.price = price;
         //  this.engine=engine;
 
     }
@@ -23,11 +23,11 @@ public class Vehicle {
     public String toString() {
 
         return
-                "- BRAND: "+brand +"\n" +
-                "- MODEL: "+model +"\n"+
-                "- COLOR: "+color +"\n"+
-                "- PRICE: "+price+" $"+"\n"+
-        "  ";
+                "- BRAND: " + brand + "\n" +
+                        "- MODEL: " + model + "\n" +
+                        "- COLOR: " + color + "\n" +
+                        "- PRICE: " + price + " $" + "\n" +
+                        "  ";
     }
 
     public String getBrand() {

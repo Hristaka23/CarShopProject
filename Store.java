@@ -4,7 +4,7 @@ import CarShopProject.Applicants.Candidate;
 import CarShopProject.Applicants.showEmployees;
 import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
-import CarShopProject.Vehicle_Package.showVehicle;
+import CarShopProject.Vehicle_Package.ShowVehicle;
 
 import java.util.Scanner;
 
@@ -40,7 +40,7 @@ public class Store {
             }
             if (choice == 4) {
 
-                showVehicle.ourVehicles(Core_Store);
+                ShowVehicle.ourVehicles(Core_Store);
             }
 //            if (choice == 5) {
 //

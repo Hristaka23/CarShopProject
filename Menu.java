@@ -16,4 +16,3 @@ public class Menu {
         );
     }
 }
-//5. Our Stores

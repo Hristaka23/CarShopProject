@@ -6,7 +6,7 @@ import CarShopProject.Vehicle_Package.CAR_TYPES.*;
 
 import java.util.*;
 
-public class showVehicle {
+public class ShowVehicle {
 
 
     public static void ourVehicles(Core_Store coreStore) {
