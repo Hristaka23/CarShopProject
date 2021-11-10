@@ -189,14 +189,15 @@ public class ShowVehicle {
 
             }
         }
-        System.out.println();
-        System.out.print("Would you like to see another type of car: [yes][no]");
-        String choice = scan.next();
-        if (choice.equals("yes")) {
-            ourVehicles(coreStore);
+        if (choice_type == 0) {
+            Menu.menu(coreStore);
+        } else {
+            System.out.println();
+            System.out.print("Would you like to see another type of car: [yes][no]");
+            String choice = scan.next();
+            if (choice.equals("yes")) {
+                ourVehicles(coreStore);
+            }
         }
-
-        Menu.menu(coreStore);
-
     }
 }

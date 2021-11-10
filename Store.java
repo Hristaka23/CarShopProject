@@ -6,6 +6,9 @@ import CarShopProject.Jobs.Jobs;
 import CarShopProject.Vehicle_Package.Car_ADD;
 import CarShopProject.Vehicle_Package.ShowVehicle;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 
@@ -14,6 +17,19 @@ public class Store {
 
 
     public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/shop_db";
+        String username = "root";
+        String password = "123456789";
+
+        System.out.println("Connecting database...");
+
+        try (Connection connection = DriverManager.getConnection(url, username, password)) {
+            System.out.println("Database connected!");
+        } catch (SQLException e) {
+            throw new IllegalStateException("Cannot connect the database!", e);
+        }
+
+
         Scanner scan = new Scanner(System.in);
         int choice = -1;
         Core_Store Core_Store = new Core_Store("Auto Number 1", "Bulgaria");

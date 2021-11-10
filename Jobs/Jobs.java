@@ -46,31 +46,33 @@ public class Jobs {
                     System.out.println("Experience: At least 2 years");
                     break;
                 case 3:
-                    System.out.println("Needed things for Engineer position:");
-                    System.out.println("Education: Must be high");
-                    System.out.println("Experience: At least 5 years");
-                    break;
-
-                case 4:
                     System.out.println("Needed things for Salesperson position:");
                     System.out.println("Education: At least secondary");
                     System.out.println("Experience: At least 2 years");
+
                     break;
 
-                case 5:
-                    System.out.println("Needed things for Technician position:");
-                    System.out.println("Education: At least secondary");
-                    System.out.println("Experience: At least 3 years");
-                    break;
-                case 6:
+                case 4:
                     System.out.println("Needed things for Inspector position:");
                     System.out.println("Education: At least secondary");
                     System.out.println("Experience: At least 8 years");
                     break;
 
+                case 5:
+                    System.out.println("Needed things for Driver position:");
+                    System.out.println("Education: At least secondary");
+                    System.out.println("Experience: At least 3 years");
+
+                    break;
+                case 6:
+                    System.out.println("Needed things for Engineer position:");
+                    System.out.println("Education: Must be high");
+                    System.out.println("Experience: At least 5 years");
+                    break;
+
 
                 case 7:
-                    System.out.println("Needed things for Driver position:");
+                    System.out.println("Needed things for Technician position:");
                     System.out.println("Education: At least secondary");
                     System.out.println("Experience: At least 3 years");
                     break;
